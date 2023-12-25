@@ -1,4 +1,71 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header-container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // 上排menu
+  .navbar{
+    .navbar-brand-md{
+      display: none;
+    }
+    .navbar-main{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20vw;
+      .navbar-brand-lg{
+        margin: 0;
+      }
+      img{
+        width: 120px;
+      }
+    }
+  }
+  // 右側邊欄
+  .nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    top: 26vh;
+    gap: 15vh;
+    text-wrap: nowrap;
+    .nav-link{
+      transform: rotate(90deg);
+      text-align: center;
+      text-wrap: nowrap;
+      color: #021220; 
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header-container {
+    justify-content: space-between;
+    flex-direction: column;
+    // 上排menu
+    .navbar {
+      .navbar-brand-md{
+        display: block;
+      }
+      .navbar-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        .navbar-brand-lg {
+          display: none;
+        }
+      }
+      img {
+        width: 80px;
+      }
+    }
+
+    // 右側邊欄
+    .nav {
+      display: none;
+    }
+  }
 }
